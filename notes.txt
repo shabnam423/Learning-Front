@@ -1,0 +1,72 @@
+                NOTE#1
+There are two ways to add an image:
+*HTML Background Images:*
+
+Purpose: Background images are used for design elements, such as setting the background of a webpage or a specific section. They often provide visual interest or enhance the overall aesthetic.
+How to Add: You can add a background image using CSS (Cascading Style Sheets). Here's a basic example:
+css
+Copy code
+body {
+    background-image: url('background-image.jpg');
+}
+Usage: Background images are typically applied to entire sections or the entire page, and they usually don't contain important content that needs to be accessible or searchable.
+*HTML Content Images:*
+
+Purpose: Content images are used to convey specific information or enhance the content of the webpage. They are usually part of the text or displayed within specific elements, such as paragraphs or sections.
+How to Add: You can add a content image directly in your HTML code using the <img> element. Here's an example:
+html
+Copy code
+<img src="content-image.jpg" alt="Description of the image">
+Usage: Content images are integrated into the content of the webpage and often contain essential information that users need to see. They should have appropriate alternative text (specified by the alt attribute) for accessibility purposes.
+                NOTE#2
+<audio controls autoplay muted loop>
+    <source src="from youtube audio library">
+    </audio>
+
+                NOTE#3
+we can add css in 3 different methods:
+inline;internal;external;
+
+                    NOTE#4
+*dashed*: Creates a border consisting of a series of dashes.
+*double*: Creates a border consisting of two solid lines.
+*groove*: Creates a border that looks as though it were carved into the page.
+*ridge*: Creates a border that looks as though it were coming out of the page.
+*inset*: Creates a border that makes the box appear embedded.
+*outset*: Creates a border that makes the box appear lifted off the canvas.
+                    NOTE#5
+using css:
+
+#id
+.class
+                    NOTE#6
+overflow:scroll/visible/hidden/auto
+                    NOTE#7
+position:relative/absolute/fixed/sticky/static
+                    NOTE#8
+combinators = explains the relationship between listed selectors
+          = descendant
+        > = child
+        ~ = general sibling
+        + = adjacent sibling
+
+Descendant combinator (space):
+
+Selects an element that is a descendant of another element.
+Example: `div p` selects all `<p>` elements that are descendants of <div> elements.
+Child combinator (>):
+
+Selects an element that is a direct child of another element.
+Example: `div > p` selects all `<p>` elements that are direct children of <div> elements.
+Adjacent sibling combinator (+):
+
+Selects an element that is immediately preceded by a sibling element.
+Example: `h2 + p` selects the `<p>` element that is immediately preceded by an <h2> element.
+General sibling combinator (~):
+
+Selects all sibling elements that follow an element.
+Example: `h2 ~ p` selects all `<p>` elements that are siblings of <h2> elements and come after them.
+
+
+
+

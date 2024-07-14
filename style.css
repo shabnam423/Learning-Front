@@ -1,0 +1,62 @@
+h1 {
+    border: 3px solid hsl(187, 61%, 29%);
+    border-radius: 20px;
+
+}
+
+p {
+    border-bottom: 3px solid hwb(265 5% 61%);
+    border-top: 4px solid black;
+    border-left: 2px dotted cornflowerblue;
+
+    h2 {
+        text-shadow: 1px 2px 3px hsl(0, 78%, 62%), -1px -2px 3px hsla(120, 78%, 62%, 0.516);
+
+    }
+}
+
+
+
+#box1 {
+    width: 100px;
+    height: 100px;
+    background-color: hwb(149 8% 42%);
+    box-shadow: 3px 3px 5px;
+    /*horizontal offset     vertical offset     blur    color*/
+
+}
+
+body {
+    margin: 0px;
+}
+
+.box {
+    border: 5px solid;
+    font-size: 5em;
+    width: 250px;
+    height: 250px;
+
+}
+
+#box1 {
+    background-color: red;
+    margin-bottom: 50px;
+    display: block;
+}
+
+#box2 {
+    background-color: blue;
+    margin-left: auto;
+    /*or you can margin:auto; to make it stay in the middle of the page*/
+}
+#img1{
+    float:right; 
+    margin-left:10 px;
+    
+} 
+main{
+    border:3px solid;
+    display: flow-root;
+       
+}
+

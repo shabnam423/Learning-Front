@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Square Moving Along Border</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            border: 2px solid #000;
+        }
+
+        .square {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background-color: red;
+            animation: moveSquare 10s linear infinite;
+        }
+
+        @keyframes moveSquare {
+            0% {
+                top: 0;
+                left: 0;
+            }
+            25% {
+                top: 0;
+                left: calc(100% - 30px);
+            }
+            50% {
+                top: calc(100% - 30px);
+                left: calc(100% - 30px);
+            }
+            75% {
+                top: calc(100% - 30px);
+                left: 0;
+            }
+            100% {
+                top: 0;
+                left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="square"></div>
+    </div>
+</body>
+</html>

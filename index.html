@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> DERS 1</title>
+    <link rel="stylesheet" href="style.css">
+
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="favicon.jpg" type="image/jpg">
+
+</head>
+
+<body>
+    <script src="index.js"></script>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <p id="p3"></p>
+    <header>
+        <h1>Hello Bro</h1>
+        <h2>How old are you?</h2>
+        <h3></h3>
+        <h4></h4>
+        <h5></h5>
+        <h6></h6>
+    </header>
+    <main>
+        
+        <div class="box" id="box1">Box 1</div>
+        <div class="box" id="box2">Box 2</div>
+        <img src="/noteswpics/input types1.png" height="150px" id="img1">
+
+        <p> </p> <!--boyuk paraqraflar;display block elementidir-->
+        <div></div> <!--block container-->
+        <span>hello</span>
+        <!--daha qisa metnler ucundur display inline elementidir(yeni dalbadal span yazsaq yanasi dusecek)-->
+        <!--unless if we write <br> then it will hit enter between two <span> tags-->
+        <pre></pre> <!--unlike <p> and <span> tags, <per> tag prints the spaces between words like how written>-->
+        <b></b> <!--bold yazi-->
+        <strong></strong> <!--bold yazidir lakin sesli ai oxuma zamani daha vurgulu oxuyur-->
+        <i></i> <!--italic yazidir-->
+        <em></em> <!--ai zamani fergli teleffus-->
+        <u></u> <!--underline-->
+        <mark></mark> <!--sariyla secilmis-->
+        <big></big> <!--a little bit bigger-->
+        <small></small> <!--nisbeten kicik yazir-->
+        <del></del> <!--uzerinden xett cekilmis formadir-->
+        H<sub>2</sub>O <!--subscript: smaller and underneath the text surrounding it-->
+        <sup></sup> <!--superscript: the opposite of sub-->
+        <!--sirali listler(ol),sirasiz listler(ul)-->
+        <p><button>i'm a button</button></p>
+        <ol type="A">
+            <li> item 1 </li>
+            <li> item 2 </li>
+            <li> item 3 </li>
+        </ol>
+
+        <ul type="circle">
+            <li> item 1 </li>
+            <li> item 2 </li>
+            <li> item 3 </li>
+            <ul>
+                <li>item 3.1</li>
+                <li>item 3.2</li>
+            </ul>
+
+        </ul>
+    </main>
+
+    <ul type="square">
+        <li> item 1 </li>
+        <li> item 2 </li>
+        <li> item 3 </li>
+
+    </ul>
+    
+    <!--Description List-->
+    <dl style="background-color:rgb(130, 223, 130); border: 2px solid">
+        <dt>dragon</dt>
+        <dd>A dragon is a magical legendary creature that appears in the folklore of multiple cultures worldwide</dd>
+    </dl>
+    <iframe src=" https://maps.app.goo.gl/V3xbteyKYuptZawV7"></iframe>
+
+    <br>
+    <a href="https://www.google.com" title="Goes to Google">click me</a>
+    <!--alt in 'img' tag does the same: useful for screen reader-->
+    <br>
+    <button>BUTTON2</button> <!--formun icinde olan button melumati gonderir ve sehifeni yenileyir
+        lakin xaricinde olan button ise esasen yeni sehifeye kecmek ucun istifade olunur-->
+    <form action="index.php" method="GET" enctype="multipart/form-data"> <!--or maybe POST for sensitive data-->
+        <fieldset> <!--cercive-->
+            <legend>Qeydiyyat</legend> <!--cercivenin icinden kecen basliq-->
+            <label for="name">Ad</label> <!--burda for icine yazilanla...-->
+            <input id="name" type="text"> <br>
+            <!--burda id icine yazilan eyni olsa Ad'a basanda boslugu sececek(usul_1)(harda olursa olsun)-->
+            <label>
+                Soyad <!--(usul_2)-->
+                <input type="text" minlength="6" required> <br>
+
+            </label>
+
+            <label>
+
+                <input type="number" placeholder="age"><br>
+            </label>
+            <label>
+
+                <input type="tel" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"><br>
+            </label>
+            <label for="payment">payment
+                <select id="payment">
+                    <option value="visa">visa</option>
+                    <option value="mastercard">mastercard</option>
+                    <option value="giftcard">giftcard</option>
+                </select><br>
+            </label>
+
+            <label for="">
+                sekil secin
+                <input type="file" accept="image/png,image/jpeg"><br>
+            </label>
+            <label>
+                sekiller secin
+                <input multiple type="file">
+            </label>
+            <label for="comment">comment</label>
+            <textarea id="comment" rows="3" cols="25"></textarea>
+            <label>
+
+                <input type="submit" value="Gonder">
+                <input type="reset" value="Reset">
+                <input type="range" name="" id="">
+
+
+
+                <label> secim 1
+                    <input type="checkbox">
+                </label>
+
+                <label> secim 2
+                    <input type="checkbox"> <!--bir nece secim sece bilirik-->
+                </label>
+                <br> <br>
+                <label>
+                    radio secim 1
+                    <input type="radio" name="secim">
+                    <!--name ile elaqelendirilir ki birini secende digeri secilmesin -->
+                </label>
+                <!-- radio seciminden yalniz 1 secim secilmesi ucun istifade olunur(ex:gender)-->
+                <label>
+                    radio secim 2
+                    <input type="radio" name="secim" checked> <!--checked avtomatik secili olaraq gelir-->
+                </label>
+            </label>
+        </fieldset>
+
+        <table cellspacing="0" cellpadding="0" border="2">
+            <thead>
+
+                <tr align="center"> <!--table row-->
+
+                    <th width="100">Sunday </th> <!--table header-->
+                    <th width="100">monday </th>
+                    <th width="100"> tuesday </th>
+                    <th width="100"> wednesday </th>
+                    <th width="100"> thursday </th>
+                    <th width="100"> friday </th>
+                    <th width="100"> saturday </th>
+
+                </tr>
+
+
+            <tbody>
+
+                <tr aligh="center">
+                    <td>closed </td>
+                    <td>9-5 </td>
+                    <td>9-5 </td>
+                    <td>9-5 </td>
+                    <td>9-5 </td>
+                    <td>9-5 </td>
+                    <td>10-2 </td>
+
+                </tr>
+
+            </tbody>
+            <a target="blank" href="youtube.com">.</a>
+
+
+
+            </thead>
+        </table>
+
+    </form>
+
+
+<footer>
+    <hr>    <!--horizontal rule-->
+    author:
+    <br>
+    &copy; copyright reserved<br>
+</footer>
+</body>
+
+</html>
