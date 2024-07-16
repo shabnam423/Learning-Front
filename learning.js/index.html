@@ -28,17 +28,36 @@
 
 
     <input type="checkbox" id="myCheckBox">
-    <label for="myCheckbox">sybscribe</label><br><br>
+    <label for="myCheckbox">subscribe</label><br><br>
 
-<input type="radio" id="visaBtn" name="card">
-<label for="visaBtn">visa</label><br>
-<input type="radio" id="masterBtn" name="card">
-<label for="masterBtn">master</label><br>
-<input type="radio" id="payPalBtn" name="card">
-<label for="payPalBtn">PayPal</label><br><br>
-<button type="submit" id="mySubmit">submit</button>
-<p id="subResult"></p>
-<p id="paymentResult"></p>
+    <input type="radio" id="visaBtn" name="card">
+    <label for="visaBtn">visa</label><br>
+    <input type="radio" id="masterBtn" name="card">
+    <label for="masterBtn">master</label><br>
+    <input type="radio" id="payPalBtn" name="card">
+    <label for="payPalBtn">PayPal</label><br><br>
+    <button type="submit" id="mySubmit">submit</button>
+    <p id="subResult"></p>
+    <p id="paymentResult"></p>
+
+
+
+
+
+    <!--temperature conversion program -->
+<form>
+<h1>Temperature conversion</h1>
+<input type="number" id="textBox" value="0"><br>
+
+<input type="radio" id="toFaranheit" name="unit"> 
+<label for="toFaranheit">Celsius ➡️ Faranheit</label><br>
+
+<input type="radio" id="toCelsuis" name="unit"> 
+<label for="toCelsius">Faranheit ➡️ Celsius</label><br>
+
+<button type="button" onclick="convert()">submit</button>
+<p id="result">Select a unit</p>
+</form>
 
 
 </body>
