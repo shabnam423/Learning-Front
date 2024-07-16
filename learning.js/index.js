@@ -142,6 +142,8 @@ myArray.reverse();
 myArray.sort();
 myArray.splice(1, 2);
 
+
+
 let myObj = { x: 1, y: 2, z: 3 };
 for (let key in myObj) {
     console.log(key, myObj[key]);
