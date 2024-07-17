@@ -130,6 +130,7 @@ console.log(myName.endsWith("am"));
 console.log(myName.substr(0, 2));
 console.log(myName.substring(0, 2));
 console.log(myName.includes("@"));
+console.log(myName.slice(0, 2));
 //array methods
 let myArray = ["apple", "banana", "cherry"];
 
@@ -154,8 +155,15 @@ for (let value of arr) {
     console.log(value);
 }
 
+const Arr = [1, 2, 3];
+Arr.forEach(val => console.log(val));
 
-console.log(myName.slice(0, 2));
+const arry = [1, 2, 3];
+const newArr = arry.map(val => val * 2);
+console.log(newArr);
+
+//spread operator = used to expand an array or object into individual elements
+//                  (unpack the elements)
 
 //   = assignment operator
 //  == comparison operator(compares if values are equal)
