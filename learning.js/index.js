@@ -113,6 +113,8 @@ console.log(myName.toLowerCase());
 console.log(myName.charAt(0));
 console.log(myName.indexOf("a"));
 console.log(myName.lastIndexOf("a"));
+console.log(myName.concat(" ", "is", " ", "a", " ", "good", " ", "boy"));
+console.log([...myName].join("-"));
 console.log(myName.trim());
 console.log(myName.includes("am"));
 console.log(myName.repeat(3));
@@ -143,7 +145,7 @@ myArray.reverse();
 myArray.sort();
 myArray.splice(1, 2);
 
-
+//LOOPS
 
 let myObj = { x: 1, y: 2, z: 3 };
 for (let key in myObj) {
@@ -162,8 +164,17 @@ const arry = [1, 2, 3];
 const newArr = arry.map(val => val * 2);
 console.log(newArr);
 
-//spread operator = used to expand an array or object into individual elements
+//spread operator = ...  used to expand an array or object into individual elements
 //                  (unpack the elements)
+
+//rest operator = ...  used to collect the remaining elements in an array or object
+//                        (opposite of spread)
+let numbers = [1, 2, 3];
+let newNumbers = [...numbers, 4, 5, 6];
+console.log(newNumbers);
+let maximum = Math.max(...numbers);
+console.log(maximum);
+
 
 //   = assignment operator
 //  == comparison operator(compares if values are equal)
@@ -224,11 +235,27 @@ function convert() {
 }
 
 
+//OBJECTS
+const courses = {
+
+    firstCourse: "C++ STL",
+    secondCourse: "DSA Self Paced",
+    thirdCourse: "CS Core Subjects"
+};
 
 
+const student1 = Object.create(courses);
+
+student1.id = 123;
+student1.firstName = "Prakhar";
+student1.showEnrolledCourses = function () {
+    console.log(courses);
+}
 
 
-
-
+for (let prop in student1) {
+    console.log(prop + " -> "
+        + student1[prop]);
+}
 
 
