@@ -258,4 +258,43 @@ for (let prop in student1) {
         + student1[prop]);
 }
 
+//CALLBACKS
+sum(displayConsole, 10, 20);
+function sum(callback, x,y){
+    let result = x+y;
+    callback(result);
+}
 
+function displayConsole(result){
+    console.log(result);
+}
+
+//forEach
+
+let myArr = [1, 2, 3, 4, 5];
+
+myArr.forEach(triple);
+myArr.forEach(display);
+
+function display(element){
+    console.log(element);
+}
+
+function triple(element, index, array){
+    array[index] = element * 3;
+}
+    
+//map()
+const numbers = [1, 2, 3, 4, 5];
+const squares = numbers.map(square);
+const cubes = numbers.map(cube);
+
+console.log(cubes);
+
+function square(element){
+    return Math .pow(element,2)
+}
+
+function cube(element){
+    return Math .pow(element,3)
+}
