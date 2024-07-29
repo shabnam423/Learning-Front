@@ -6,6 +6,10 @@ console.log('Hello', 'World', '!');
 console.log(`you are ${Age} years old!`);
 document.getElementById("p1").textContent = Name;
 
+
+//value => !value
+//function(value) { return !value; }
+
 //USER INPUT
 // 1. Easy way= window prompt
 let username;
@@ -258,6 +262,17 @@ for (let prop in student1) {
         + student1[prop]);
 }
 
+//CONSTUCTORS
+
+function Car(make, model, year, color){
+    this.make = make;
+    this.model = model;
+    this.year = year;
+    this.color = color;
+}
+
+const car1 = new Car("Ford", "Mustang", 2020, "red");
+
 //CALLBACKS
 sum(displayConsole, 10, 20);
 function sum(callback, x,y){
@@ -269,7 +284,7 @@ function displayConsole(result){
     console.log(result);
 }
 
-//forEach
+//.forEach = executes a provided function once for each array element
 
 let myArr = [1, 2, 3, 4, 5];
 
@@ -284,10 +299,10 @@ function triple(element, index, array){
     array[index] = element * 3;
 }
     
-//map()
-const numbers = [1, 2, 3, 4, 5];
-const squares = numbers.map(square);
-const cubes = numbers.map(cube);
+//.map() = creates a new array from calling a function for every array element
+const Numbers = [1, 2, 3, 4, 5];
+const squares = Numbers.map(square);
+const cubes = Numbers.map(cube);
 
 console.log(cubes);
 
@@ -298,3 +313,26 @@ function square(element){
 function cube(element){
     return Math .pow(element,3)
 }
+
+//filter() = creates a new array with all elements that pass a test
+
+const numBers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+const evenNumbers = numBers.filter(isEven);
+console.log(evenNumbers);
+
+function isEven(element){
+    return element % 2 === 0;
+}
+
+//.reduce() = reduces the array to a single value
+
+const grades = [17, 50, 90, 65, 80, 95];
+const Maximum = grades.reduce(getMax);
+
+console.log(Maximum);
+
+function getMax(element1, element2){
+    return Math.max(element1, element2);
+}
+ 
