@@ -247,7 +247,6 @@ const courses = {
     thirdCourse: "CS Core Subjects"
 };
 
-
 const student1 = Object.create(courses);
 
 student1.id = 123;
@@ -256,7 +255,6 @@ student1.showEnrolledCourses = function () {
     console.log(courses);
 }
 
-
 for (let prop in student1) {
     console.log(prop + " -> "
         + student1[prop]);
@@ -264,7 +262,7 @@ for (let prop in student1) {
 
 //CONSTUCTORS
 
-function Car(make, model, year, color){
+function Car(make, model, year, color) {
     this.make = make;
     this.model = model;
     this.year = year;
@@ -273,14 +271,102 @@ function Car(make, model, year, color){
 
 const car1 = new Car("Ford", "Mustang", 2020, "red");
 
+//CLASS = (blueprint for creating objects) provides a more structured 
+//        and cleaner way to work with objects compared to traditional constructor functions
+
+class Person {
+
+    static personCount = 0;
+    constructor(firstName, lastName, age) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+        Person.personCount++;
+    }
+    getFullName() {
+        return this.firstName + " " + this.lastName;
+    }
+
+    //when ur assigning values even when ur initially creating an object you can go through the setters for input validation
+    set age(newAge){
+        if(newAge > 0){
+            this._age=newAge;
+        }
+        else{
+            console.error("Age cannot be negative");
+        }
+    }
+    //when u retrieve values annd try and read(access) them you can add additionnal getters
+    get age(){
+        return this._age;
+    }
+
+}
+
+const person1 = new Person("Shabnam", "Nazarli", 17);
+
+//INHERITANCE = allows a new class to inheritproperties
+//              and methods from an existing class (parent -> child)
+//              helps with code reusability
+
+
+// super = keyword is used in classes to call the constructor or
+//         access the parent class's properties and methods
+
+class Animal {
+    alive = true;
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+    eat() {
+        console.log(`This ${this.name} is eating`);
+    }
+    sleep() {
+        console.log(`This ${this.name} is sleeping`);
+    }
+
+    move(speed) {
+        console.log(`This ${this.name} is moving at ${speed} km/hr`);
+    }
+}
+
+class Rabbit extends Animal {
+    name = "rabbit";
+    constructor(name, age, runSpeed) {
+        super(name, age);
+        this.runSpeed = runSpeed;
+    }
+
+    run() {
+        console.log(`This ${this.name} is running`);
+super.move(this.runSpeed);
+    }
+}
+class Fish extends Animal {
+    name = "fish";
+
+    swim() {
+        console.log(`This ${this.name} is swimming`);
+    }
+}
+
+const rabbit = new Rabbit("rabbit", 1, 25);
+const fish = new Fish();
+
+console.log(rabbit.alive);
+console.log(fish.alive);
+rabbit.eat();
+fish.eat();
+
 //CALLBACKS
 sum(displayConsole, 10, 20);
-function sum(callback, x,y){
-    let result = x+y;
+function sum(callback, x, y) {
+    let result = x + y;
     callback(result);
 }
 
-function displayConsole(result){
+function displayConsole(result) {
     console.log(result);
 }
 
@@ -291,14 +377,14 @@ let myArr = [1, 2, 3, 4, 5];
 myArr.forEach(triple);
 myArr.forEach(display);
 
-function display(element){
+function display(element) {
     console.log(element);
 }
 
-function triple(element, index, array){
+function triple(element, index, array) {
     array[index] = element * 3;
 }
-    
+
 //.map() = creates a new array from calling a function for every array element
 const Numbers = [1, 2, 3, 4, 5];
 const squares = Numbers.map(square);
@@ -306,12 +392,12 @@ const cubes = Numbers.map(cube);
 
 console.log(cubes);
 
-function square(element){
-    return Math .pow(element,2)
+function square(element) {
+    return Math.pow(element, 2)
 }
 
-function cube(element){
-    return Math .pow(element,3)
+function cube(element) {
+    return Math.pow(element, 3)
 }
 
 //filter() = creates a new array with all elements that pass a test
@@ -321,7 +407,7 @@ const numBers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 const evenNumbers = numBers.filter(isEven);
 console.log(evenNumbers);
 
-function isEven(element){
+function isEven(element) {
     return element % 2 === 0;
 }
 
@@ -332,7 +418,6 @@ const Maximum = grades.reduce(getMax);
 
 console.log(Maximum);
 
-function getMax(element1, element2){
+function getMax(element1, element2) {
     return Math.max(element1, element2);
 }
- 
